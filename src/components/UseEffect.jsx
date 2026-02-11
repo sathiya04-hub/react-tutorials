@@ -16,7 +16,7 @@ function UseEffect() {
       <h3>Purpose: 
         <ul>
           <li>Hook in React allows you to perform side effects in functional components</li>
-          <li>Use useEffect Hook to maintain state globally</li>
+          <li>Examples: fetching data, directly updating the DOM, and timers. useEffect accepts two arguments</li>
         </ul> 
       </h3>
       <h3>I've rendered {count} times!</h3>;

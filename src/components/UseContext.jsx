@@ -1,8 +1,8 @@
 import { useContext } from "react";
-import UserContext from "../context/UserContext";
+import { MyContext } from "../context/MyContext";
 
 function UseContext() {
-  const { setUser } = useContext(UserContext);
+  const { user, setUser } = useContext(MyContext);
 
   return (
     <>
@@ -13,9 +13,8 @@ function UseContext() {
           <li>Use createContext & useContext Hook to maintain state globally</li>
         </ul> 
       </h3>
-      <button onClick={() => setUser("Sathya")}>
-        Change User
-      </button>
+      <button onClick={() => setUser({ name: "Sathi" })}>Change User</button>
+      <h3>{`Hello ${user.name}!`}</h3>
     </>
   );
 }

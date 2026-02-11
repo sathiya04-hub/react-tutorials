@@ -16,8 +16,8 @@ const UseCustomHooks = () => {
     </h3>
       {data &&
         data.map((item, index) => {
-          if(index<=10){
-            return <table><tr><td><p key={item.id}>{item.title}</p></td></tr></table>;
+          if(index<=4){
+            return <p key={item.id}>{item.title}</p>;
           }          
         })}
     </>
