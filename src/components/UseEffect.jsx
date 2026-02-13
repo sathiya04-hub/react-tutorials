@@ -11,15 +11,16 @@ function UseEffect() {
 
   return( 
     <>
-      <hr></hr>
       <h1>useEffect Component</h1>
-      <h3>Purpose: 
+      <h5>Purpose: 
         <ul>
           <li>Hook in React allows you to perform side effects in functional components</li>
           <li>Examples: fetching data, directly updating the DOM, and timers. useEffect accepts two arguments</li>
         </ul> 
-      </h3>
-      <h3>I've rendered {count} times!</h3>;
+      </h5>
+      <div className="box shadow p-4">
+        <h5>I've rendered {count} times!</h5>
+      </div>
     </>
   )
 }

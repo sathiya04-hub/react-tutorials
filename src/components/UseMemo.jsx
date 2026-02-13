@@ -16,29 +16,28 @@ function UseMemo() {
   return (
     <div>
       <div>
-        <br></br>
-        <br></br>
-        <hr></hr>
         <h1>useMemo Component</h1>
-        <h3>Purpose: 
+        <h5>Purpose: 
             <ul>
             <li>React hook that optimizes performance by caching the result of expensive calculations between re-renders</li>
             <li>It recomputes the value only when its dependencies change, preventing unnecessary, slow recalculations on every render</li>
             </ul> 
-        </h3>
-        <h2>My Todos</h2>
-        {todos.map((todo, index) => {
-          return <p key={index}>{todo}</p>;
-        })}
-        <button onClick={addTodo}>Add Todo</button>
+        </h5>
+        <div className="box shadow p-4">
+          <h2>My Todos</h2>
+          {todos.map((todo, index) => {
+            return <p key={index}>{todo}</p>;
+          })}
+          <button className='btn btn-success' onClick={addTodo}>Add Todo</button>
+        </div>
       </div>
-      <br></br>
-      <div>
+
+      <div className="box shadow p-4 mt-3">
         Count: {count}
-        <button onClick={increment}>+</button>
+        <button className='btn btn-primary ms-2' onClick={increment}>+</button>
         <h2>Expensive Calculation</h2>
         {calculation}
-        <h3>Note that this example executes the expensive function also when you click on the Add Todo button.</h3>
+        <h5>Note that this example executes the expensive function also when you click on the Add Todo button.</h5>
       </div>
     </div>
   );

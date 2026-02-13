@@ -16,18 +16,18 @@ function AddCustomer() {
 
   return (
     <>
-      <h1>Add Customer</h1>
-
-      <input
-        type="text"
-        value={input}
-        onChange={(e) => setInput(e.target.value)}
-        onKeyDown={(e) => e.key === "Enter" && addCustomerData()}
-      />
-
-      <button onClick={addCustomerData}>Add</button>
-
-      <AddCustomerList customers={customers} />
+      <div className='box shadow p-4'>
+        <h5>Add Customer Name</h5>
+        <input
+          type="text"
+          className="form-control"
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+          onKeyDown={(e) => e.key === "Enter" && addCustomerData()}
+        />
+        <button className="btn btn-success mt-3 mb-3" onClick={addCustomerData}>Add</button>
+        <AddCustomerList customers={customers} />
+      </div>      
     </>
   );
 }

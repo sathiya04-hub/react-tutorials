@@ -2,8 +2,8 @@ import React, { useState, useCallback } from 'react';
 
 // Child component that receives a function prop
 const Button = React.memo(({ onClick, text }) => {
-  console.log(`Child ${text} button rendered`);
-  return <button onClick={onClick}>{text}</button>;
+  //console.log(`Child ${text} button rendered`);
+  return <button className="btn btn-success me-3" onClick={onClick}>{text}</button>;
 });
 
 function UseCallBack() {
@@ -22,22 +22,22 @@ function UseCallBack() {
   //console.log("Parent rendered");
   
   return (
-    <div>
-      <br></br>
-      <br></br>
+    <>
       <hr></hr>
       <h1>useCallback Component</h1>
-      <h3>Purpose: 
+      <h5>Purpose: 
         <ul>
           <li>React hook that caches (memoizes) a function definition between renders, preventing unnecessary re-creations</li>
           <li>It optimizes performance, specifically when passing callbacks to React.memo() optimized child components</li>
         </ul> 
-      </h3>
-      <p>Count 1: {count1}</p>
-      <p>Count 2: {count2}</p>
-      <Button onClick={handleClick1} text="Button 1" />
-      <Button onClick={handleClick2} text="Button 2" />
-    </div>
+      </h5>
+      <div className="box shadow p-4">
+        <p>Count 1: {count1}</p>
+        <p>Count 2: {count2}</p>
+        <Button onClick={handleClick1} text="Button 1" />
+        <Button onClick={handleClick2} text="Button 2" />
+      </div>
+    </>
   );
 }
 

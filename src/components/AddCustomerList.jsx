@@ -2,14 +2,14 @@
 function AddCustomerList({customers}){
   return (
     <>
-        <h1>Customer list</h1>
-        <ul>
-
-            {customers.map((customer, index) => (
-                <li key={index}>{customer}</li>
-            ))}
-        </ul>
-    </>
+      {customers.length > 0 && (
+        <><h5>Customer List</h5><ul>
+        {customers.map((customer, index) => (
+          <li key={index}>{customer}</li>
+        ))}
+      </ul></>
+      )}
+    </>    
   );
 };
 

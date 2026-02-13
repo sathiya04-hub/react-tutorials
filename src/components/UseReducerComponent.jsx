@@ -22,21 +22,24 @@ function UseReducerComponent() {
   const [state, dispatch] = useReducer(counterReducer, initialState);
 
   return (
-    <div>
-      <hr></hr>
+    <>
       <h1>useReducer Componenent</h1>
-      <h3>Purpose: 
+      <h5>Purpose: 
         <ul>
           <li>Manage complex state logic in React functional components</li>
           <li>It follows a pattern similar to Redux, centralizing state management logic in a single function called a "reducer".</li>
         </ul> 
-      </h3>      
-      <p>Count: {state.count}</p>
-      {/* 4. Dispatch actions */}
-      <button onClick={() => dispatch({ type: 'INCREMENT' })}>Increment</button>
-      <button onClick={() => dispatch({ type: 'DECREMENT' })}>Decrement</button>
-      <button onClick={() => dispatch({ type: 'RESET' })}>Reset</button>
-    </div>
+      </h5>      
+      <div className="box shadow p-4 mt-3">
+        <p>Count: {state.count}</p>
+        {/* 4. Dispatch actions */}
+        <div className="d-flex gap-3">
+          <button className='btn btn-success' onClick={() => dispatch({ type: 'INCREMENT' })}>Increment</button>
+          <button className='btn btn-danger' onClick={() => dispatch({ type: 'DECREMENT' })}>Decrement</button>
+          <button className='btn btn-primary' onClick={() => dispatch({ type: 'RESET' })}>Reset</button>
+        </div>
+      </div>
+    </>
   );
 }
 

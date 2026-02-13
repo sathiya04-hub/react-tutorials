@@ -10,21 +10,22 @@ function UseReference() {
 
   return (
     <>
-      <hr></hr>
       <h1>useReference Component</h1>
-      <h3>Purpose: 
+      <h5>Purpose: 
         <ul>
           <li>Direct Accessing and Managing DOM Elements</li>
           <li>Storing Mutable Values That Do Not Trigger Re-renders</li>
         </ul> 
-      </h3>
-      <h3>Type in the input field:</h3>
-      <input
-        type="text"
-        value={inputValue}
-        onChange={(e) => setInputValue(e.target.value)}
-      />
-      <h1>Render Count: {count.current}</h1>
+      </h5>
+      <div className="box shadow p-4">
+        <h5>Type in the input field:</h5>
+        <input
+          type="text"
+          value={inputValue}
+          onChange={(e) => setInputValue(e.target.value)}
+        />
+        <h5 className="mt-3">Render Count: {count.current}</h5>
+      </div>
     </>
   );
 }
