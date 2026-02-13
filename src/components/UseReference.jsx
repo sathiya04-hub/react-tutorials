@@ -10,8 +10,10 @@ function UseReference() {
 
   return (
     <>
-      <h1>useReference Component</h1>
-      <h5>Purpose: 
+      <h1>useRef</h1>
+      <h5>The <b>useRef</b> Hook allows you to persist values between renders. It can be used to access a DOM element directly.</h5>
+      <h5>It can be used to store a mutable value that does not cause a re-render when updated.</h5>
+      <h5 className="mt-3"><b>Purpose:</b> 
         <ul>
           <li>Direct Accessing and Managing DOM Elements</li>
           <li>Storing Mutable Values That Do Not Trigger Re-renders</li>
@@ -21,6 +23,7 @@ function UseReference() {
         <h5>Type in the input field:</h5>
         <input
           type="text"
+          className="form-control"
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
         />

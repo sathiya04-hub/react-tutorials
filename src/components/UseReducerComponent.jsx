@@ -23,17 +23,19 @@ function UseReducerComponent() {
 
   return (
     <>
-      <h1>useReducer Componenent</h1>
-      <h5>Purpose: 
+      <h1>useReducer</h1>
+      <h5>The <b>useReducer</b> Hook is similar to the useState Hook. It allows for custom state logic.</h5>
+      <h5>The <b>useReducer</b> Hook returns the current stateand a dispatchmethod.</h5>
+      <h5 className="mt-3"><b>Purpose:</b>
         <ul>
           <li>Manage complex state logic in React functional components</li>
-          <li>It follows a pattern similar to Redux, centralizing state management logic in a single function called a "reducer".</li>
+          <li>If you find yourself keeping track of multiple pieces of state that rely on complex logic.</li>
         </ul> 
       </h5>      
       <div className="box shadow p-4 mt-3">
-        <p>Count: {state.count}</p>
+        <h5>Count: {state.count}</h5>
         {/* 4. Dispatch actions */}
-        <div className="d-flex gap-3">
+        <div className="d-flex gap-2">
           <button className='btn btn-success' onClick={() => dispatch({ type: 'INCREMENT' })}>Increment</button>
           <button className='btn btn-danger' onClick={() => dispatch({ type: 'DECREMENT' })}>Decrement</button>
           <button className='btn btn-primary' onClick={() => dispatch({ type: 'RESET' })}>Reset</button>

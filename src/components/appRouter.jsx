@@ -1,4 +1,7 @@
 import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom';
+import store from '../app/store'
+import { Provider } from 'react-redux'
+
 import { MyProvider  } from "../context/MyContext";
 import AddCustomer from "./AddCustomer";
 import UseContext from "./UseContext";
@@ -8,11 +11,12 @@ import UseCallBack from "./UseCallBack";
 import UseMemo from "./UseMemo";
 import UseCustomHooks from "./UseCustomHooks";
 import UseReducerComponent from "./UseReducerComponent";
+import MyReduxComponent from "./myredux/MyReduxComponent";
 
 function AppRouter() {   // ✅ Renamed
   return (
     <>
-    <h1>Welcome to My React Components</h1>
+    <h1>Welcome to My React Components(React 19)</h1>
 
     <BrowserRouter>
       <nav className="navbar navbar-light">
@@ -21,8 +25,10 @@ function AppRouter() {   // ✅ Renamed
         <NavLink to="/use-reference">UseReference</NavLink> |{" "}
         <NavLink to="/use-callback">UseCallBack</NavLink> |{" "}   
         <NavLink to="/use-memo">UseMemo</NavLink> |{" "}
-        <NavLink to="/use-reducer">UseReducerComponent</NavLink> |{" "}
-        <NavLink to="/use-customhooks">UseCustomHooks</NavLink>        
+        <NavLink to="/use-reducer">UseReducer</NavLink> |{" "}
+        <NavLink to="/react-redux">React-Redux</NavLink> |{" "}
+        <NavLink to="/use-customhooks">UseCustomHooks</NavLink>
+        
       </nav>
 
       <div className="box shadow p-5">
@@ -33,7 +39,8 @@ function AppRouter() {   // ✅ Renamed
             <Route path="/use-callback" element={<UseCallBack />} />
             <Route path="/use-memo" element={<UseMemo />} />        
             <Route path="/use-reducer" element={<UseReducerComponent />} />
-            <Route path="/use-customhooks" element={<UseCustomHooks />} />        
+            <Route path="/react-redux" element={<Provider store={store}><MyReduxComponent /></Provider>} />
+            <Route path="/use-customhooks" element={<UseCustomHooks />} />                
         </Routes>
       </div>
     </BrowserRouter>

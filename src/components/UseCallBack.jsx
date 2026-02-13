@@ -23,9 +23,12 @@ function UseCallBack() {
   
   return (
     <>
-      <hr></hr>
-      <h1>useCallback Component</h1>
-      <h5>Purpose: 
+      <h1>useCallback</h1>
+      <h5>The <b>useCallback</b> Hook is used to memoize a callback function.</h5>
+      <h5>Memoizing a function means caching the result of a function so that it does not need to be recalculated.</h5>
+      <h5>The <b>useCallback</b> function only re-executes when one of its dependencies changes value.</h5>
+      <h5>This allows us to isolate resource intensive functions so that they will not automatically run on every render.</h5>
+      <h5 className="mt-3"><b>Purpose:</b> 
         <ul>
           <li>React hook that caches (memoizes) a function definition between renders, preventing unnecessary re-creations</li>
           <li>It optimizes performance, specifically when passing callbacks to React.memo() optimized child components</li>
